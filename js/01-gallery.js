@@ -26,48 +26,48 @@ const gallery = document.querySelector(".gallery");
 
 
 
-const images = galleryItems.map(({ description, original, preview }) => {
-  const gallery = document.querySelector(".gallery");
-  const galleryItem = document.createElement("div");
-  galleryItem.classList.add("gallery__item");
+// const images = galleryItems.map(({ description, original, preview }) => {
+//   const gallery = document.querySelector(".gallery");
+//   const galleryItem = document.createElement("div");
+//   galleryItem.classList.add("gallery__item");
 
-  const galleryLink = document.createElement("a");
-  galleryLink.classList.add("gallery__link");
-  galleryLink.href = original;
+//   const galleryLink = document.createElement("a");
+//   galleryLink.classList.add("gallery__link");
+//   galleryLink.href = original;
 
-  const img = document.createElement("img");
-  img.classList.add("gallery__image");
-  img.setAttribute("data-source", original);
-  console.log(img.getAttribute);
+//   const img = document.createElement("img");
+//   img.classList.add("gallery__image");
+//   img.setAttribute("data-source", original);
+//   console.log(img.getAttribute);
   
-  img.src = preview;
-  img.alt = description;
+//   img.src = preview;
+//   img.alt = description;
 
-  galleryLink.append(img);
-  galleryLink.append(img);
-  gallery.append(galleryLink);
+//   galleryLink.append(img);
+//   galleryLink.append(img);
+//   gallery.append(galleryLink);
 
-  // return
-});
+//   // return
+// });
 
 // console.log(gallery)
 
-// const img = galleryItems
-//   .map(function (imgEl) {
-//     const { preview, original, description } = imgEl;
-//     return `<div class="gallery__item">
-//       <a class="gallery__link" href="${original}">
-//         <img
-//           class="gallery__image"
-//           src="${preview}"
-//           data-source= "${original}"
-//           alt= "${description}"
-//         />
-//       </a>
-//     </div>`;
-//   })
-//   .join("");
-// gallery.insertAdjacentHTML("afterbegin", img);
+const img = galleryItems
+  .map(function (imgEl) {
+    const { preview, original, description } = imgEl;
+    return `<div class="gallery__item">
+      <a class="gallery__link" href="${original}">
+        <img
+          class="gallery__image"
+          src="${preview}"
+          data-source= "${original}"
+          alt= "${description}"
+        />
+      </a>
+    </div>`;
+  })
+  .join("");
+gallery.insertAdjacentHTML("afterbegin", img);
 
 
 
