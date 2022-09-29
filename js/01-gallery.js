@@ -3,26 +3,6 @@ import { galleryItems } from "./gallery-items.js";
 
 const gallery = document.querySelector(".gallery");
 
-// const galleryItem = document.createElement("div");
-// galleryItem.classList.add("gallery__item");
-
-// const galleryLink = document.createElement('a');
-// galleryLink.classList.add("gallery__link");
-// galleryLink.href = galleryItems[0].original;
-
-// const img = document.createElement("img");
-// img.classList.add("gallery__image");
-// img.src = galleryItems[0].preview
-// img.alt = galleryItems[0].description;
-
-// galleryLink.append(img);
-// galleryItem.append(galleryLink);
-
-// gallery.append(galleryLink);
-// console.log(gallery);
-
-
-
 
 
 
@@ -91,7 +71,7 @@ function modalClick(event) {
 
   instance.show();
 
-}
+};
 
 
 
